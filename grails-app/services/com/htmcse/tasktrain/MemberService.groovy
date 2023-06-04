@@ -1,8 +1,13 @@
 package com.htmcse.tasktrain
 
+import com.htmcse.traintask.AppUtil
+
+import com.htmcse.traintask.GlobalConfig
 import com.htmcse.traintask.Member
+import grails.gorm.transactions.Transactional
 import grails.web.servlet.mvc.GrailsParameterMap
 
+@Transactional
 class MemberService {
     def save(GrailsParameterMap params) {
         Member member = new Member(params)
